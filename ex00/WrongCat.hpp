@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/01 19:38:47 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/12/01 19:39:45 by yel-moun         ###   ########.fr       */
+/*   Created: 2024/12/02 16:48:49 by yel-moun          #+#    #+#             */
+/*   Updated: 2024/12/02 16:51:10 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef WRONGCAT_H
+#define WRONGCAT_H
 
-int main(int argc, char const *argv[])
-{
-	std::cout << "init" << std::endl;
-	 
-	return 0;
-}
+#include "WrongAnimal.hpp"
+
+class WrongCat : public WrongAnimal {
+	public:
+		WrongCat();
+		~WrongCat();
+		WrongCat(const WrongCat &obj);
+		WrongCat &operator= (const WrongCat &obj);
+		void makeSound() const;
+		std::string getType() const;
+};
+
+#endif
