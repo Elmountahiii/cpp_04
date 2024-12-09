@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 12:27:41 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/12/03 12:39:56 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/12/09 21:51:52 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,12 @@ Cat::~Cat()
 Cat::Cat(const Cat &obj)
 {
 	std::cout << "Cat Copy Constructor Called" << std::endl;
-	*this = obj;
+	this->brain = new Brain();
+	this->_type = obj._type;
+	for (size_t i = 0; i < 100; i++)
+	{
+		this->brain->setIdeas(i, obj.brain->getIdeas()[i]);
+	}
 }
 
 Cat &Cat::operator=(const Cat &obj)
@@ -41,6 +46,7 @@ Cat &Cat::operator=(const Cat &obj)
 	if(this == &obj)
 		return (*this);
 	this->_type = obj._type;
+	delete this->brain;
 	this->brain = new Brain();
 	for (size_t i = 0; i < 100; i++)
 	{

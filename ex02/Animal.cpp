@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 12:02:49 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/12/03 12:54:11 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/12/09 21:56:18 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 Animal::Animal() : _type("Unkown")
 {
-	
 	std::cout << "Animal Constructor Called" << std::endl;
 }
 
@@ -26,7 +25,7 @@ Animal::~Animal()
 Animal::Animal(const Animal &obj)
 {
 	std::cout << "Animal Copy Constructor Called" << std::endl;
-	*this = obj;
+	this->_type = obj._type;
 }
 
 Animal &Animal::operator=(const Animal &obj)

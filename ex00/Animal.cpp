@@ -6,13 +6,13 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 12:02:49 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/12/02 15:30:54 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/12/09 21:04:37 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal() : _type("Unkown")
+Animal::Animal() : _type("Animal")
 {
 	std::cout << "Animal Constructor Called" << std::endl;
 }
