@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 13:08:00 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/12/09 20:56:03 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/12/10 12:28:49 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,14 @@ void	myTest(){
 	AMateria* tmp = src->createMateria("ice");
 	me->equip(tmp);
 	me->use(0, *enemy);
-	me->use(100, *enemy);
+	me->use(1, *enemy);
+	me->unquip(0);
 	me->unquip(1);
 	me->use(1, *enemy);
 	delete src;
 	delete me;
 	delete enemy;
+	delete tmp;
 }
 
 int main(void)

@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/04 20:15:01 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/12/09 20:09:32 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/12/10 12:08:48 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ Node::Node(AMateria *data){
 Node::~Node(void)
 {
 	delete this->_data;
-	delete this->_next;
 }
 
 Node::Node(const Node& obj)

@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 11:37:59 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/12/02 15:30:47 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/12/10 11:36:21 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Animal {
 	
 	protected:
 	 	std::string _type;
-	
+
 	public :
 		Animal();
 		virtual ~Animal();

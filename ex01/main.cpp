@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 12:48:04 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/12/09 21:14:04 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/12/10 12:13:11 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@ void	subject_test(void)
 	delete i;
 }
 
-
-int main(void)
-{
-	subject_test();
+void	my_test(void)
+{	
 	
+	std::cout << "------------ Deep copy test 1 -------------" << std::endl;
 	Animal *animls[20];
 	
 	for (size_t i = 0; i < 20; i++)
@@ -47,13 +46,19 @@ int main(void)
 	{
 		delete animls[i];
 	}
-	std::cout << "------------ Deep copy test -------------" << std::endl;
+	std::cout << "------------ Deep copy test 2 -------------" << std::endl;
 	Cat *a = new Cat();
 	Cat *b = new Cat(*a);
 	std::cout << "Address of a brain : " << a->getBrain() << std::endl;
 	std::cout << "Address of b brain : " << b->getBrain() << std::endl;
 	delete a;
 	delete b;
+}
+
+int main(void)
+{
+	subject_test();
+	my_test();
 	system("leaks poly");
 	return (0);
 }

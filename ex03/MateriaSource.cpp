@@ -62,7 +62,7 @@ AMateria * MateriaSource::createMateria(std::string const & type){
 	for (size_t i = 0; i < 4; i++)
 	{
 		if (this->_data[i] && this->_data[i]->getType() == type)
-			return (this->_data[i]);
+			return (this->_data[i]->clone());
 	}
 	return NULL;
 }

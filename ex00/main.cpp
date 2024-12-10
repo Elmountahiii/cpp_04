@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 12:48:04 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/12/02 17:01:01 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/12/10 11:39:10 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,7 @@ int main(void)
 	const WrongAnimal *c = new WrongCat();
 	w->makeSound();
 	c->makeSound();
+	delete w;
+	delete c;
 	return 0;
 }

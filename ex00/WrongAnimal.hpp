@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/02 15:48:28 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/12/02 15:49:44 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/12/10 12:09:02 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class WrongAnimal {
 	
 	public :
 		WrongAnimal();
-		~WrongAnimal();
+		virtual ~WrongAnimal();
 		WrongAnimal(const WrongAnimal &obj);
 		WrongAnimal &operator=(const WrongAnimal &obj);
 		std::string	getType() const;

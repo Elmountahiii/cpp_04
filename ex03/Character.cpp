@@ -67,7 +67,7 @@ void	Character::equip(AMateria *obj){
 	for (int i = 0; i < 4 ; i++){
 
 		if (this->inventory[i] == NULL){
-			this->inventory[i] = obj->clone();
+			this->inventory[i] = obj;
 			break;
 		}
 	}
@@ -82,6 +82,7 @@ void Character::unquip(int index){
 		{
 			this->list->add(this->inventory[i]);
 			this->inventory[i] = NULL;
+			break;
 		}
 	}
 }
